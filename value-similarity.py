@@ -124,7 +124,7 @@ def main(argv = None):
 
 				#get key : value of metadata
 				for key in parsedData["metadata"].keys() :
-					file_parsed.append(str(key.strip(' ') + ": " + parsedData["metadata"].get(key).strip(' ')))
+					file_parsed.append(str(key.encode('utf-8').strip(' ') + ": " + parsedData["metadata"].get(key).encode('utf-8').strip(' ')))
 
 
 				file_parsed_data[filename] = set(file_parsed)
